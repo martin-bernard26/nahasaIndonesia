@@ -25,6 +25,10 @@ def ujianTest():
     st.markdown('''
     <iframe src="https://martin-bernard26.github.io/mediaPBI/tugas.html" style="width:100%;height:600px"></iframe>
     ''',unsafe_allow_html=True)
+def materi3():
+    st.markdown('''
+    <iframe src="https://martin-bernard26.github.io/mediaPBI/IntegrasiPsiKur.html" style="width:100%;height:2300px"></iframe>
+    ''',unsafe_allow_html=True)
 # =======================================
 if st.session_state.kondisi['kondisi2']:
     materi1()
@@ -32,6 +36,8 @@ if st.session_state.kondisi['kondisi3']:
     materi2()
 if st.session_state.kondisi['kondisi4']:
     ujianTest()
+if st.session_state.kondisi['kondisi5']:
+    materi3()
 #=============================================
 if st.sidebar.button('Beranda'):
     st.session_state.kondisi={'kondisi1': True, 'kondisi2':False, 'kondisi3':False,
@@ -50,5 +56,10 @@ if st.sidebar.button('Psikologi Pendidikan'):
 
 if st.sidebar.button('Teori-teori Psikologi Pendidikan'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':True,
-                              'kondisi4':True, 'kondisi5':False, 'kondisi6':False}
+                              'kondisi4':False, 'kondisi5':False, 'kondisi6':False}
+    st.rerun()
+
+if st.sidebar.button('Kurikulum Pembelajaran berdasarkan Psikologi'):
+    st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
+                              'kondisi4':False, 'kondisi5':True, 'kondisi6':False}
     st.rerun()
