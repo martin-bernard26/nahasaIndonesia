@@ -63,3 +63,4 @@ if st.sidebar.button('Kurikulum Pembelajaran berdasarkan Psikologi'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':True, 'kondisi6':False}
     st.rerun()
+
