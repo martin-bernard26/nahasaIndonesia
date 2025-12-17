@@ -5,7 +5,7 @@ st.set_page_config(layout="wide")
 if "kondisi" not in st.session_state:
     st.session_state.kondisi={'kondisi1': True, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False,'kondisi8':False}
+                              'kondisi7':False,'kondisi8':False,'kondisi9': False}
 
 # ====================================
 def materi1():
@@ -58,6 +58,10 @@ def materi6():
     st.markdown('''
         <iframe src="https://martin-bernard26.github.io/mediaPBI/kurikulumSkr.html" style="width:100%;height:2300px"></iframe>
         ''',unsafe_allow_html=True)
+def materi7():
+    st.markdown('''
+        <iframe src="https://drive.google.com/file/d/1Ni9P3uIN5kW5LEhyKOdO0tBlVzJT7WNx/preview" style="width:100%;height:2300px"></iframe>
+        ''',unsafe_allow_html=True)
 # =======================================
 if st.session_state.kondisi['kondisi2']:
     materi1()
@@ -73,48 +77,55 @@ if st.session_state.kondisi['kondisi7']:
     materi5()
 if st.session_state.kondisi['kondisi8']:
     materi6()
+if st.session_state.kondisi['kondisi9']:
+    materi7()
 #=============================================
 if st.sidebar.button('Beranda'):
     st.session_state.kondisi={'kondisi1': True, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 
 if st.sidebar.button('Kumpulan Tugas dan UTS dan UAS'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':True, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 
 if st.sidebar.button('Psikologi Pendidikan'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':True, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 
 if st.sidebar.button('Teori-teori Psikologi Pendidikan'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':True,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 if st.sidebar.button('Materi Bahasa Indonesia'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':True,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 
 if st.sidebar.button('Kurikulum Pembelajaran berdasarkan Psikologi'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':True, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':False}
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 if st.sidebar.button('Kurikulum Pembelajaran berdasarkan Psikologi Kognitif'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':True, 'kondisi8':False}
+                              'kondisi7':True, 'kondisi8':False, 'kondisi9': False}
     st.rerun()
 if st.sidebar.button('Kurikulum Bahasa Indonesia saat ini'):
     st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
                               'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
-                              'kondisi7':False, 'kondisi8':True}
+                              'kondisi7':False, 'kondisi8':True, 'kondisi9': False}
+    st.rerun()
+if st.sidebar.button('Soal UAS'):
+    st.session_state.kondisi={'kondisi1': False, 'kondisi2':False, 'kondisi3':False,
+                              'kondisi4':False, 'kondisi5':False, 'kondisi6':False,
+                              'kondisi7':False, 'kondisi8':False, 'kondisi9':True}
     st.rerun()
